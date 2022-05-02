@@ -7,39 +7,22 @@ using System.IO;
 
 namespace BaladeurMultiFormats
 {
-    class IChanson
+    public interface IChanson
     {
-        public int Annee { get; }
-        public string Artiste { get; }
-        public string Format { get; }
-        public string NomFichier { get; }
-        public string Paroles { get; }
-        public string Titre { get; }
+        int Annee { get; }
+        string Artiste { get; }
+        string Format { get; }
+        string NomFichier { get; }
+        string Paroles { get; }
+        string Titre { get; }
 
-        public void LireEntete()
-        {
+        void LireEntete();
 
-        }
+        void LireParoles(StreamReader pobjFichier);
+        void SauterEntete(StreamReader pobjFichier);
 
-        public void LireParoles(StreamReader pobjFichier)
-        {
-
-        }
-        public void SauterEntete(StreamReader pobjFichier)
-        {
-
-        }
-        public void EcrireEntete(StreamWriter pobjFichier)
-        {
-
-        }
-        public void EcrireParoles(StreamWriter pobjFichier, string pParoles)
-        {
-
-        }
-        public void Ecrire(string pParoles)
-        {
-
-        }
+        void EcrireEntete(StreamWriter pobjFichier);
+        void EcrireParoles(StreamWriter pobjFichier, string pParoles);
+        void Ecrire(string pParoles);
     }
 }

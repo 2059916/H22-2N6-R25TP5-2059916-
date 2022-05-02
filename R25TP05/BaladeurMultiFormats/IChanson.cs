@@ -18,7 +18,7 @@ namespace BaladeurMultiFormats
 
         void LireEntete();
 
-        void LireParoles(StreamReader pobjFichier);
+        string LireParoles(StreamReader pobjFichier);
         void SauterEntete(StreamReader pobjFichier);
 
         void EcrireEntete(StreamWriter pobjFichier);

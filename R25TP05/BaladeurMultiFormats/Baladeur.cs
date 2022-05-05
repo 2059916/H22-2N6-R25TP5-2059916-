@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
+
 
 namespace BaladeurMultiFormats
 {
@@ -36,6 +38,19 @@ namespace BaladeurMultiFormats
                     if (chanson != null)
                         m_colChansons.Add(chanson);
                 }
+        }
+
+        public void AfficherLesChansons(ListView pListView)
+        {
+            foreach(Chanson chanson in m_colChansons)
+            {
+                ListViewItem chansonView = new ListViewItem(chanson.Artiste);
+                chansonView.SubItems.Add(chanson.Titre);
+                chansonView.SubItems.Add(chanson.Annee.ToString());
+                chansonView.SubItems.Add(chanson.Format);
+                
+                pListView.Items.Add(chansonView);
+            }
         }
 
         public Chanson ChansonAt(int pIndex)
@@ -105,7 +120,6 @@ namespace BaladeurMultiFormats
             chansonWMA.EcrireParoles(stream, paroles);
             stream.Close();
         }
-
 
     }
 }

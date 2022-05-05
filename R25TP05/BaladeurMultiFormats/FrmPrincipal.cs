@@ -14,6 +14,7 @@ namespace BaladeurMultiFormats
 
         #region Propriété : MonHistorique
         public Historique MonHistorique { get; }
+        public Baladeur MonBaladeur;
         #endregion
         //---------------------------------------------------------------------------------
         #region FrmPrincipal
@@ -23,6 +24,8 @@ namespace BaladeurMultiFormats
             Text += APP_INFO;
             MonHistorique = new Historique();
             // À COMPLÉTER...
+            MonBaladeur = new Baladeur();
+            MonBaladeur.AfficherLesChansons(lsvChansons);
         }
         #endregion
         //---------------------------------------------------------------------------------

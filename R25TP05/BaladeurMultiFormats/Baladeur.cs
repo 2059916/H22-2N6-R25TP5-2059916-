@@ -23,7 +23,7 @@ namespace BaladeurMultiFormats
         public void ConstruireLaListeDesChansons()
         {
             if (Directory.Exists(NOM_REPERTOIRE))
-                foreach(string fichier in Directory.GetFiles(NOM_REPERTOIRE))
+                foreach (string fichier in Directory.GetFiles(NOM_REPERTOIRE))
                 {
                     Chanson chanson = null;
                     if (File.Exists(fichier))

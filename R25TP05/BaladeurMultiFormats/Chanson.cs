@@ -40,6 +40,8 @@ namespace BaladeurMultiFormats
             StreamReader fichier = new StreamReader(m_nomFichier);
             SauterEntete(fichier);
             Paroles = LireParoles(fichier);
+
+            fichier.Close();
         }
 
         public abstract void LireEntete();

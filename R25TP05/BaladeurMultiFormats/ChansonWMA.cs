@@ -27,9 +27,9 @@ namespace BaladeurMultiFormats
             string[] Entete = stream.ReadLine().Trim().Split('/');
 
             m_codage = int.Parse(Entete[0]);
-            Annee = int.Parse(Entete[1]);
-            Titre = Entete[2];
-            Artiste = Entete[3];
+            m_annee = int.Parse(Entete[1]);
+            m_titre = Entete[2];
+            m_artiste = Entete[3];
         }
 
         public override string LireParoles(StreamReader pobjFichier)

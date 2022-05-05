@@ -9,26 +9,37 @@ namespace BaladeurMultiFormats
 {
     public abstract class Chanson : IChanson
     {
+        protected int m_annee;
+        protected string m_artiste;
+        protected string m_nomFichier;
+        protected string m_titre;
 
-        public int Annee { get; set; }
-        public string Artiste { get; set; }
-        public string NomFichier { get; }
+        public int Annee { get { return m_annee; } }
+        public string Artiste { get { return m_artiste; } }
+        public string NomFichier { get { return m_nomFichier; } }
         public string Paroles { get; }
-        public string Titre { get; set; }
+        public string Titre { get { return m_titre; } }
         public abstract string Format { get; }
 
         public Chanson(string pNomFichier)
         {
-            NomFichier = pNomFichier;
+            m_nomFichier = pNomFichier;
             LireEntete();
+            StreamReader fichier = new StreamReader(pNomFichier);
+            SauterEntete(fichier);
+            Paroles = LireParoles(fichier);
+
         }
 
         public Chanson(string pRepertoire, string pArtiste, string pTitre, int pAnnée)
         {
-            Artiste = pArtiste;
-            Titre = pTitre;
-            Annee = pAnnée;
-            NomFichier = pRepertoire;
+            m_artiste = pArtiste;
+            m_titre = pTitre;
+            m_annee = pAnnée;
+            m_nomFichier = pRepertoire;
+            StreamReader fichier = new StreamReader(m_nomFichier);
+            SauterEntete(fichier);
+            Paroles = LireParoles(fichier);
         }
 
         public abstract void LireEntete();

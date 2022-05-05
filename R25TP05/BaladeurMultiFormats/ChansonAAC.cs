@@ -25,9 +25,9 @@ namespace BaladeurMultiFormats
             StreamReader stream = new StreamReader(NomFichier);
             string[] Entete = stream.ReadLine().Trim().Split(':');
 
-            Titre = Entete[0].Split('=')[1];
-            Artiste = Entete[1].Split('=')[1];
-            Annee = int.Parse(Entete[2].Split('=')[1]);
+            m_titre = Entete[0].Split('=')[1];
+            m_artiste = Entete[1].Split('=')[1];
+            m_annee = int.Parse(Entete[2].Split('=')[1]);
         }
 
         public override string LireParoles(StreamReader pobjFichier)

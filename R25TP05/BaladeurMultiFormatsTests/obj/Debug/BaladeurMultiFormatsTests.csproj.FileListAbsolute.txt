@@ -98,3 +98,7 @@ J:\H21 2N6 Les Capsules\R24 Travail Pratique #5\_Code C#\R24 Tp5 Baladeur MF (Ma
 J:\H21 2N6 Les Capsules\R24 Travail Pratique #5\_Code C#\R24 Tp5 Baladeur MF (Matériel) H21.2.7\R24TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.csproj.CopyComplete
 J:\H21 2N6 Les Capsules\R24 Travail Pratique #5\_Code C#\R24 Tp5 Baladeur MF (Matériel) H21.2.7\R24TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.dll
 J:\H21 2N6 Les Capsules\R24 Travail Pratique #5\_Code C#\R24 Tp5 Baladeur MF (Matériel) H21.2.7\R24TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.pdb
+C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.csproj.AssemblyReference.cache
+C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.csproj.CoreCompileInputs.cache
+C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.dll
+C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.pdb

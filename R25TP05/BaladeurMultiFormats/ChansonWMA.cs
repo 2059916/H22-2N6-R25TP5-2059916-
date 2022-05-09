@@ -18,18 +18,19 @@ namespace BaladeurMultiFormats
         }
         public ChansonWMA(string pRepertoire, string pArtiste, string pTitre, int pAnnée) : base(pRepertoire, pArtiste, pTitre, pAnnée)
         {
-
+            m_codage = 15;
         }
 
         public override void LireEntete()
         {
             StreamReader stream = new StreamReader(NomFichier);
-            string[] Entete = stream.ReadLine().Trim().Split('/');
+            string[] Entete = stream.ReadLine().Split('/');
 
             m_codage = int.Parse(Entete[0]);
             m_annee = int.Parse(Entete[1]);
-            m_titre = Entete[2];
-            m_artiste = Entete[3];
+            m_titre = Entete[2].Trim();
+            m_artiste = Entete[3].Trim();
+            stream.Close();
         }
 
         public override string LireParoles(StreamReader pobjFichier)
@@ -44,7 +45,9 @@ namespace BaladeurMultiFormats
 
         public override void EcrireParoles(StreamWriter pobjFichier, string pParoles)
         {
-            pobjFichier.WriteLine(OutilsFormats.EncoderWMA(pParoles,m_codage));
+            m_paroles = pParoles;
+            string parolesEncode = OutilsFormats.EncoderWMA(pParoles,m_codage);
+            pobjFichier.WriteLine(parolesEncode);
         }
     }
 }

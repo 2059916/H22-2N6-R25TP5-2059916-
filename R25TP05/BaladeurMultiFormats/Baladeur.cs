@@ -42,6 +42,7 @@ namespace BaladeurMultiFormats
 
         public void AfficherLesChansons(ListView pListView)
         {
+            pListView.Items.Clear();
             foreach(Chanson chanson in m_colChansons)
             {
                 ListViewItem chansonView = new ListViewItem(chanson.Artiste);
@@ -70,15 +71,19 @@ namespace BaladeurMultiFormats
             int annee = chanson.Annee;
             string paroles = chanson.Paroles;
 
-            ChansonAAC chansonAAC = new ChansonAAC("Chansons",artiste,titre,annee);
+            StreamWriter stream = new StreamWriter(NOM_REPERTOIRE + "\\" + titre.Trim() + ".aac");
+
+            ChansonAAC chansonAAC = new ChansonAAC(NOM_REPERTOIRE, artiste,titre,annee);
+
             m_colChansons.Add(chansonAAC);
+            m_colChansons.Remove(chanson);
 
-            File.Delete(NOM_REPERTOIRE + "\\" + chanson.NomFichier);
-
-            StreamWriter stream = new StreamWriter(NOM_REPERTOIRE + "\\" + titre + "." + chansonAAC.Format.ToLower());
             chansonAAC.EcrireEntete(stream);
-            chansonAAC.EcrireParoles(stream,paroles);
+            chansonAAC.EcrireParoles(stream, paroles);
+
             stream.Close();
+
+            File.Delete(chanson.NomFichier);
         }
 
         public void ConvertirVersMP3(int pIndex)
@@ -90,15 +95,19 @@ namespace BaladeurMultiFormats
             int annee = chanson.Annee;
             string paroles = chanson.Paroles;
 
-            ChansonMP3 chansonMP3 = new ChansonMP3("Chansons", artiste, titre, annee);
+            StreamWriter stream = new StreamWriter(NOM_REPERTOIRE + "\\" + titre.Trim() + ".mp3");
+
+            ChansonMP3 chansonMP3 = new ChansonMP3(NOM_REPERTOIRE, artiste, titre, annee);
+
             m_colChansons.Add(chansonMP3);
+            m_colChansons.Remove(chanson);
 
-            File.Delete(NOM_REPERTOIRE + "\\" + chanson.NomFichier);
-
-            StreamWriter stream = new StreamWriter(NOM_REPERTOIRE + "\\" + titre + "." + chansonMP3.Format.ToLower());
             chansonMP3.EcrireEntete(stream);
             chansonMP3.EcrireParoles(stream, paroles);
+
             stream.Close();
+
+            File.Delete(chanson.NomFichier);
         }
 
         public void ConvertirVersWMA(int pIndex)
@@ -110,15 +119,19 @@ namespace BaladeurMultiFormats
             int annee = chanson.Annee;
             string paroles = chanson.Paroles;
 
-            ChansonWMA chansonWMA = new ChansonWMA("Chansons", artiste, titre, annee);
+            StreamWriter stream = new StreamWriter(NOM_REPERTOIRE + "\\" + titre.Trim() + ".wma");
+
+            ChansonWMA chansonWMA = new ChansonWMA(NOM_REPERTOIRE, artiste, titre, annee);
+
             m_colChansons.Add(chansonWMA);
+            m_colChansons.Remove(chanson);
 
-            File.Delete(NOM_REPERTOIRE + "\\" + chanson.NomFichier);
-
-            StreamWriter stream = new StreamWriter(NOM_REPERTOIRE + "\\" + titre + "." + chansonWMA.Format.ToLower());
             chansonWMA.EcrireEntete(stream);
             chansonWMA.EcrireParoles(stream, paroles);
+
             stream.Close();
+
+            File.Delete(chanson.NomFichier);
         }
 
     }

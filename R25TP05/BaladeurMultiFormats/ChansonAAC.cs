@@ -23,11 +23,12 @@ namespace BaladeurMultiFormats
         public override void LireEntete()
         {
             StreamReader stream = new StreamReader(NomFichier);
-            string[] Entete = stream.ReadLine().Trim().Split(':');
+            string[] Entete = stream.ReadLine().Split(':');
 
-            m_titre = Entete[0].Split('=')[1];
-            m_artiste = Entete[1].Split('=')[1];
+            m_titre = Entete[0].Split('=')[1].Trim();
+            m_artiste = Entete[1].Split('=')[1].Trim();
             m_annee = int.Parse(Entete[2].Split('=')[1]);
+            stream.Close();
         }
 
         public override string LireParoles(StreamReader pobjFichier)
@@ -42,7 +43,9 @@ namespace BaladeurMultiFormats
 
         public override void EcrireParoles(StreamWriter pobjFichier, string pParoles)
         {
-            pobjFichier.WriteLine(OutilsFormats.EncoderAAC(pParoles));
+            m_paroles = pParoles;
+            string parolesEncode = OutilsFormats.EncoderAAC(pParoles);
+            pobjFichier.WriteLine(parolesEncode);
         }
     }
 }

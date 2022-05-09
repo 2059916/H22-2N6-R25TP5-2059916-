@@ -13,11 +13,12 @@ namespace BaladeurMultiFormats
         protected string m_artiste;
         protected string m_nomFichier;
         protected string m_titre;
+        protected string m_paroles;
 
         public int Annee { get { return m_annee; } }
         public string Artiste { get { return m_artiste; } }
         public string NomFichier { get { return m_nomFichier; } }
-        public string Paroles { get; }
+        public string Paroles { get { return m_paroles; } }
         public string Titre { get { return m_titre; } }
         public abstract string Format { get; }
 
@@ -27,8 +28,8 @@ namespace BaladeurMultiFormats
             LireEntete();
             StreamReader fichier = new StreamReader(pNomFichier);
             SauterEntete(fichier);
-            Paroles = LireParoles(fichier);
-
+            m_paroles = LireParoles(fichier);
+            fichier.Close();
         }
 
         public Chanson(string pRepertoire, string pArtiste, string pTitre, int pAnnée)
@@ -36,12 +37,8 @@ namespace BaladeurMultiFormats
             m_artiste = pArtiste;
             m_titre = pTitre;
             m_annee = pAnnée;
-            m_nomFichier = pRepertoire;
-            StreamReader fichier = new StreamReader(m_nomFichier);
-            SauterEntete(fichier);
-            Paroles = LireParoles(fichier);
+            m_nomFichier = pRepertoire + "\\" + pArtiste + "." + Format.ToLower();
 
-            fichier.Close();
         }
 
         public abstract void LireEntete();
@@ -59,7 +56,6 @@ namespace BaladeurMultiFormats
 
             EcrireEntete(stream);
             EcrireParoles(stream,pParoles);
-
             stream.Close();
         }
 

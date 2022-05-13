@@ -42,7 +42,7 @@ namespace BaladeurMultiFormats.Tests
 
             // Assert : Vérifier si le constructeur lève une exception ArgumentNullException
             // À compléter...
-
+            Assert.IsNotNull(consultation_Test);
             //[ExpectedException(typeof(ArgumentNullException))]
         }
 

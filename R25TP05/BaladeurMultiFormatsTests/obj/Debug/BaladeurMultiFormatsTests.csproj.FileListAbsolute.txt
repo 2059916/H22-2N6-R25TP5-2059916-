@@ -102,3 +102,7 @@ C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTes
 C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.csproj.CoreCompileInputs.cache
 C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.dll
 C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.pdb
+C:\Users\Utilisateur\OneDrive\Images\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\OneDrive\Images\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\OneDrive\Images\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.dll
+C:\Users\Utilisateur\OneDrive\Images\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormatsTests\obj\Debug\BaladeurMultiFormatsTests.pdb

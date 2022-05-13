@@ -24,3 +24,7 @@ C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormats\ob
 C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormats\obj\Debug\BaladeurMultiFormats.csproj.CoreCompileInputs.cache
 C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormats\obj\Debug\BaladeurMultiFormats.exe
 C:\Users\2059916\Desktop\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormats\obj\Debug\BaladeurMultiFormats.pdb
+C:\Users\Utilisateur\OneDrive\Images\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormats\obj\Debug\BaladeurMultiFormats.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\OneDrive\Images\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormats\obj\Debug\BaladeurMultiFormats.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilisateur\OneDrive\Images\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormats\obj\Debug\BaladeurMultiFormats.exe
+C:\Users\Utilisateur\OneDrive\Images\H22-2N6-R25TP5-2059916-\R25TP05\BaladeurMultiFormats\obj\Debug\BaladeurMultiFormats.pdb

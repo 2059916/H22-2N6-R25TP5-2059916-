@@ -14,8 +14,8 @@ namespace BaladeurMultiFormats
 
         #region Propriété : MonHistorique
         public Historique MonHistorique { get; }
-        public Baladeur MonBaladeur;
         #endregion
+        public Baladeur MonBaladeur;
         //---------------------------------------------------------------------------------
         #region FrmPrincipal
         public FrmPrincipal()
@@ -25,7 +25,7 @@ namespace BaladeurMultiFormats
             MonHistorique = new Historique();
             // À COMPLÉTER...
             MonBaladeur = new Baladeur();
-            MonBaladeur.AfficherLesChansons(lsvChansons);
+            MettreAJourSelonContexte();
         }
         #endregion
         //---------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ namespace BaladeurMultiFormats
         private void LsvChansons_SelectedIndexChanged(object sender, EventArgs e)
         {
             // À COMPLÉTER...
-            if (lsvChansons.SelectedItems.Count <= 0)
+            if (lsvChansons.SelectedItems.Count <= 0 && lsvChansons.SelectedItems[0].Index >= 0)
             {
                 txtParoles.Text = "";
             }
